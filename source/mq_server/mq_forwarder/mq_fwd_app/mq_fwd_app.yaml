@@ -1,0 +1,55 @@
+sdp_client:
+  - server_ip_addr: 127.0.0.1
+    server_port: 24978
+    type: tcp
+    enable: 1
+
+plugin:
+  - name: mq_forwarder_service
+    priority: 1
+    enable: 1
+
+log_common:
+  log_archive_switch: 0
+  log_create_log_period: 1
+  log_create_log_period_switch: 1
+
+log:
+  - name: run_log
+    max_file_size: 1048576
+    max_backup_number: 10
+    log_level: 2
+  - name: inf_log
+    max_file_size: 1048576
+    max_backup_number: 10
+    log_level: 2
+  - name: stat_log
+    max_file_size: 1048576
+    max_backup_number: 10
+    log_level: 2
+
+sys_param:
+  service_container_num: 6
+  garbage_reclaim_interval: 60
+  task_stack_size: 8  # mb
+  max_fds: 16
+
+idp:
+    msg_buf_size: 4194304
+    reconnect_time_out_value: 1
+    handshake_time_out_value: 10
+    message_cache_timeout_value: 5
+  
+db:
+    host: 172.16.50.98
+    port: 3306
+    user_name: root
+    password: root
+    db_name: demo
+
+mq:
+    mq_forwarder_num: 8
+    mq_forwarder_ip_addr: 127.0.0.1
+    mq_forwarder_port: 34978
+    tcp_nodelay_flag: 0
+    socket_buffer_size: 4096

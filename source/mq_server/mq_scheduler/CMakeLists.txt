@@ -1,0 +1,2 @@
+add_subdirectory(mq_sch_app)
+add_subdirectory(mq_scheduler_service)

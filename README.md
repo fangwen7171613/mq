@@ -1,24 +1,39 @@
-# MQ - Message Queue for SDP
+# FAST MQ Project - Secondary Development Environment Setup
 
-**MQ** is an integral component of the **Software Development Platform (SDP)**, designed to facilitate high-performance, scalable, and reliable message queuing services.
+## 1. System Requirements
 
-## Overview
+### 1.1 Operating System
+- **Linux** (Recommended: Ubuntu or CentOS)
+- Supports x64-linux architecture.
 
-MQ stands for Message Queue, a peer-cluster, load-balancing messaging system that supports ultra-high performance. It is engineered to handle high throughput and reliable message delivery in distributed systems, making it an excellent choice for modern, scalable applications.
+### 1.2 Software Dependencies
+- This project does not depend on any additional software.
+- Supports server-side cluster deployment and load balancing for high-performance environments.
 
-## Features
+## 2. High Performance Requirements
 
-- **High-Throughput Messaging**: Optimized for scenarios requiring fast processing and delivery of messages.
-- **Load Balancing**: Efficiently distributes messages across the peer-cluster to ensure even load and prevent bottlenecks.
-- **Scalability**: Designed to scale horizontally, accommodating increases in traffic and data volume with ease.
-- **Reliability**: Implements mechanisms to guarantee message delivery even in the face of network disruptions or server failures.
+### 2.1 High Concurrency and Performance Processing
+- Each forwarder node can handle millions of scheduling tasks, offering high concurrency and performance.
 
-## Getting Started
+### 2.2 Cluster Support
+- Supports peer-to-peer cluster deployment, with theoretically unlimited scheduling capacity.
+- Ideal for large-scale data flows and distributed environments.
 
-For detailed setup instructions and documentation, please refer to the [SDP repository's README](https://github.com/fangwen7171613/sdp.git).
+### 2.3 Single-node Scheduling Capability
+- A single forwarder node is capable of handling millions of scheduling tasks.
 
-### Quick Start
+### 2.4 Load Balancing
+- Supports server-side cluster and load balancing deployment for scalable systems.
 
-1. Clone the SDP repository:
-   ```bash
-   git clone https://github.com/fangwen7171613/sdp.git
+### 2.5 I/O Performance (New in v5.1)
+- Support for **io_uring**: From version 5.1 onward, io_uring is supported for high-performance I/O operations on Linux.
+- This significantly improves asynchronous I/O performance, especially under heavy workloads.
+
+## 3. Deployment and Configuration
+
+### 3.1 Set Environment Variables
+In your development or production environment, set the following environment variables:
+
+```bash
+export WORK_ROOT=/path/to/work
+export WORK_DATA_ROOT=/path/to/data

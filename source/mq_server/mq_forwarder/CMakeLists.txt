@@ -1,0 +1,2 @@
+add_subdirectory(mq_fwd_app)
+add_subdirectory(mq_forwarder_service)
