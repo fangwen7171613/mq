@@ -54,6 +54,9 @@ In your development or production environment, set the following environment var
 ```bash
 export WORK_ROOT=/path/to/work
 export WORK_DATA_ROOT=/path/to/data
+
+gmail: fangw717161@gmail.com
+
 ====================================================================================================================
 FAST MQ - 高性能轻量级消息队列系统
 核心特点
@@ -91,3 +94,4 @@ FAST MQ 在网络游戏中表现优异，通过超低时延和高吞吐量支持
 实时操作响应：提供流畅的游戏体验。
 高并发处理：同时服务数千玩家。
 灵活扩展：轻松满足游戏生态的快速增长需求。
+gmail账号: fangw717161@gmail.com
